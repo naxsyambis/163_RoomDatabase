@@ -1,4 +1,4 @@
-package com.example.a163_roomdatabase.view.uicontroller
+package com.example.a163_roomdatabase.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
