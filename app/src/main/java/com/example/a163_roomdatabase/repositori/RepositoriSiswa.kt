@@ -9,17 +9,20 @@ interface RepositoriSiswa {
     suspend fun insertSiswa(siswa: Siswa)
     // tambah 3 fungsi
 
-//    fun getSiswaStream(id: Int): Flow<Siswa?>
-    //?null safety
+    fun getSiswaStream(id: Int): Flow<Siswa?> //    ?null safety
 
-//    suspend fun deleteSiswa(siswa: Siswa)
+    suspend fun deleteSiswa(siswa: Siswa)
 
-//    suspend fun updateSiswa(siswa: Siswa)
+    suspend fun updateSiswa(siswa: Siswa)
 }
 
-class OfflineRepositoriSiswa(
+class OfflineRepositoriSiswa( // turunan dari atas, cara menggunakannya harus di overide
     private val siswaDao: SiswaDao
 ): RepositoriSiswa {
     override fun getAllSiswaStream(): Flow<List<Siswa>> = siswaDao.getAllSiswa()
     override  suspend fun  insertSiswa(siswa: Siswa) = siswaDao.insert(siswa)
+    //edit 2: tambah 3 overide berikut
+    override fun getSiswaStream(id: Int): Flow<Siswa?> = siswaDao.getSiswa(id)
+    override suspend fun deleteSiswa(siswa: Siswa) = siswaDao.update(siswa)
+    override suspend fun updateSiswa(siswa: Siswa) = siswaDao.update(siswa)
 }
