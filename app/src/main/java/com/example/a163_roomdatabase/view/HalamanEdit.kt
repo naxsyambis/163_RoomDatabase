@@ -12,24 +12,22 @@ import com.example.a163_roomdatabase.view.route.DestinasiEditSiswa
 import com.example.a163_roomdatabase.viewmodel.EditViewModel
 import com.example.a163_roomdatabase.viewmodel.provider.PenyediaViewModel
 import kotlinx.coroutines.launch
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EditSiswaScreen(
     navigateBack: () -> Unit,
     onNavigateUp: () -> Unit,
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     viewModel: EditViewModel = viewModel(factory = PenyediaViewModel.Factory)
 ) {
     Scaffold(
         topBar = {
             SiswaTopAppBar(
                 title = stringResource(DestinasiEditSiswa.titleRes),
-                canNavigateBack = true,
-                navigateBack = onNavigateUp
+                canNavigateBack = true
             )
         },
-        modifier = Modifier
+        modifier = modifier
     ) { innerPadding ->
         val coroutineScope = rememberCoroutineScope()
         EntrySiswaBody(
