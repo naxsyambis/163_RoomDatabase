@@ -1,8 +1,16 @@
 package com.example.a163_roomdatabase.viewmodel
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.a163_roomdatabase.repositori.RepositoriSiswa
+import com.example.a163_roomdatabase.view.route.DestinasiDetailSiswa
+import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 
 class EditViewModel {
 
