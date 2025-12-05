@@ -6,7 +6,9 @@ import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.a163_roomdatabase.repositori.AplikasiSiswa
+import com.example.a163_roomdatabase.view.EditSiswaScreen
 import com.example.a163_roomdatabase.viewmodel.DetailViewModel
+import com.example.a163_roomdatabase.viewmodel.EditViewModel
 import com.example.a163_roomdatabase.viewmodel.EntryViewModel
 import com.example.a163_roomdatabase.viewmodel.HomeViewModel
 
@@ -24,6 +26,12 @@ object PenyediaViewModel {
             DetailViewModel(this.createSavedStateHandle(),
                 aplikasiSiswa().container.repositoriSiswa)
         }
+
+        initializer {
+            EditViewModel(this.createSavedStateHandle(),
+                aplikasiSiswa().container.repositoriSiswa)
+        }
+
     }
 }
 
