@@ -1,0 +1,5 @@
+![Home.png](../../../OneDrive/Pictures/Screenshots/Home.png)
+![Field.png](../../../OneDrive/Pictures/Screenshots/Field.png)
+![Entry.png](../../../OneDrive/Pictures/Screenshots/Entry.png)
+![detailSiswa.PNG](../../../Downloads/detailSiswa.PNG)
+![konfirmasipenghapusan.PNG](../../../Downloads/konfirmasipenghapusan.PNG)
